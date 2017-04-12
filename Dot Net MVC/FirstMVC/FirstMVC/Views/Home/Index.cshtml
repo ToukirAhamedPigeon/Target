@@ -1,0 +1,28 @@
+﻿@model IEnumerable<FirstMVC.Models.Students>
+@using FirstMVC.Models;
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        <h4>List</h4>
+        <ul>
+            @foreach(Students student in Model )
+            {
+                <li>
+                    @Html.ActionLink(student.Name,"Details",new { id= student.Id })
+                </li>
+            }
+        </ul>
+    </div>
+</body>
+</html>
