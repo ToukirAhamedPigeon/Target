@@ -1,0 +1,31 @@
+﻿@using SecondMVC.Models
+@model IEnumerable<SecondMVC.Models.Students>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>All</title>
+</head>
+<body>
+    <div> 
+        <h3>All Students</h3>
+        <ul>
+            @foreach(Students stu in Model)
+            {
+                <li>
+                    @Html.ActionLink(stu.Name,"Details",new { id=stu.Id})
+                </li>
+            }
+        </ul>
+        <p>
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+    </div>
+</body>
+</html>

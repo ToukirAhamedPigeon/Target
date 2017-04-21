@@ -4,7 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
-namespace FirstMVC.Models
+namespace SecondMVC.Models
 {
     public class SchoolContext:DbContext
     {

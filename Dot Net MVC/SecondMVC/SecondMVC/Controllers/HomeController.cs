@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace FirstMVC.Controllers
+namespace SecondMVC.Controllers
 {
     public class HomeController : Controller
     {

@@ -1,5 +1,5 @@
-﻿@model IEnumerable<FirstMVC.Models.Students>
-@using FirstMVC.Models;
+﻿@using FirstMVC.Models
+@model IEnumerable<FirstMVC.Models.Students>
 
 @{
     Layout = null;
@@ -10,16 +10,16 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <title>Class</title>
 </head>
 <body>
     <div> 
-        <h4>List</h4>
+        @*<h3>All Students</h3>*@
         <ul>
-            @foreach(Students student in Model )
+            @foreach (Students st in Model)
             {
                 <li>
-                    @Html.ActionLink(student.Name,"Details",new { id= student.Id })
+                    @Html.ActionLink(st.Name, "Details", new { id = st.Id });
                 </li>
             }
         </ul>

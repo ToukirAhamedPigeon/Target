@@ -1,0 +1,32 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        <h3>Students</h3>
+        <ul>
+            <li>
+                @Html.ActionLink("All","All")
+            </li>
+            @for(int i=1;i<=10;i++)
+            {
+                <li>
+                    @Html.ActionLink("Class " + i, "Class", new { Class = i })
+                </li>
+            }
+        </ul>
+        <p>
+            @Html.ActionLink("Back to Home", "Index", "Home")
+        </p>
+    </div>
+</body>
+</html>
